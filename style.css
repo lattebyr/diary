@@ -1,0 +1,181 @@
+body {
+  background-color: #f6f1ee;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+/* PAINEL PRINCIPAL */
+.main {
+  text-align: center;
+  margin-bottom: 30px;
+  background: linear-gradient(rgba(255, 182, 193, 0.6), rgba(255, 192, 203, 0.6)),
+              url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  border-radius: 15px;
+  color: white;
+  min-height: 250px;
+}
+
+.main h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.main p {
+  font-size: 14px;
+  opacity: 0.9;
+  color: white;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+h2 {
+  color: #d67b94;
+}
+
+p {
+  font-size: 14px;
+  color: #444;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.grid a {
+  display: contents;
+}
+
+.card a {
+  display: block;
+.main {
+  background: linear-gradient(135deg, #f8cdda, #f0c4ab);
+  height: 250px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #691d32; /* 👈 COR MAIS ESCURA */
+}
+}.card.main {
+  background-color: #f6d6dc;
+}.main h1, .main p {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}.card.main {
+  color: #8b3a50;
+}.main p {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 500;
+}.link-feelings {
+  display: block;
+  background-color: white;
+  padding: 15px;
+  margin: 20px auto;
+  width: 200px;
+
+  text-decoration: none;
+  color: #8b3a50;
+  font-size: 18px;
+
+  border-radius: 10px;
+  text-align: center;
+}.link-feelings:hover {
+  background-color: #f6d6dc;
+}.feelings-page .card {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}.feelings-page {
+  background-color: white;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+}.feelings-page h1 {
+  margin-bottom: 10px;
+}
+
+.feelings-page h2 {
+  margin-top: 25px;
+  color: #c97a8a;
+}.diary {
+  background-color: #ffffff;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 20px;
+
+  line-height: 1.8;
+}.diary h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.diary h2 {
+  margin-top: 30px;
+  color: #c97a8a;
+  font-size: 20px;
+}.diary p {
+  font-size: 16px;
+  color: #444;
+}
+
+.intro {
+  font-style: italic;
+  opacity: 0.8;
+}.diary h2::before {
+  content: "— ";
+}.blog {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 20px;
+}.post {
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}.date {
+  font-size: 13px;
+  color: #999;
+}.post h2 {
+  margin: 10px 0;
+  color: #c97a8a;
+}
+
+.post p {
+  color: #444;
+  line-height: 1.6;
+}

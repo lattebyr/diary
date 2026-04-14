@@ -1,181 +1,336 @@
-body {
-  background-color: #f6f1ee;
-  font-family: 'Playfair Display', serif;
+/* RESET */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* FUNDO */
+body {
+  background: #f7f3ef;
+  color: #3b2f2f;
+  font-family: 'Playfair Display', serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* LOGO */
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+/* MENU */
+
+.menu a:hover {
+  color: #6e2c3a;
+  text-decoration: underline;
+}
+
+/* CONTAINER */
 .container {
-  width: 90%;
   max-width: 900px;
-  margin: 50px auto;
+  margin: auto;
+  padding: 20px;
 }
 
-/* PAINEL PRINCIPAL */
+/* CARD PRINCIPAL */
 .main {
   text-align: center;
   margin-bottom: 30px;
-  background: linear-gradient(rgba(255, 182, 193, 0.6), rgba(255, 192, 203, 0.6)),
-              url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80");
-  background-size: cover;
-  background-position: center;
-  padding: 60px 20px;
-  border-radius: 15px;
-  color: white;
-  min-height: 250px;
 }
 
-.main h1 {
+h1 {
+  color: #6e2c3a;
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+.slogan {
   font-family: 'Great Vibes', cursive;
-  font-size: 50px;
-  letter-spacing: 2px;
-}
-
-.main p {
-  font-size: 14px;
-  opacity: 0.9;
-  color: white;
+  color: #b76e79;
+  font-size: 22px;
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
 /* CARDS */
 .card {
-  background: #fff;
+  background: #ffffff;
+  border-radius: 16px;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
   cursor: pointer;
 }
 
-h2 {
-  color: #d67b94;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-p {
-  font-size: 14px;
-  color: #444;
+/* TÍTULOS */
+h2 {
+  color: #6e2c3a;
+  margin-bottom: 10px;
+}
+
+/* BOTÃO LIKE */
+.like-btn {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #b76e79;
+  font-size: 16px;
+}
+
+.like-btn.liked {
+  color: #6e2c3a;
+}
+
+/* BOTÃO MÚSICA */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #b76e79;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.music-btn:hover {
+  background: #6e2c3a;
+  box-shadow: 0 0 10px #c6a96b;
+}
+/* ===== DIÁRIO (ESTILO COM PERSONALIDADE) ===== */
+
+.diary {
+  max-width: 700px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* POST */
+.entry {
+  background: #fffaf6;
+  padding: 20px 25px;
+  border-radius: 12px;
+  width: fit-content;
+  max-width: 85%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  position: relative;
+  transition: 0.3s;
+}
+
+/* ALTERNADO (lado direito) */
+.entry:nth-child(even) {
+  margin-left: auto;
+}
+
+/* DETALHE (fitinha aesthetic) */
+.entry::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: 40px;
+  height: 10px;
+  background: #e8cfc1;
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+/* DATA */
+.entry .date {
+  font-size: 11px;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* TEXTO */
+.entry p {
+  font-size: 16px;
+  line-height: 1.7;
+}/* FUNDO GERAL */
+body {
+  background: #f7f3ef;
+  color: #3b2f2f;
+}
+
+/* TÍTULOS */
+h1, h2, h3 {
+  color: #6e2c3a;
+}h1 {
+  letter-spacing: 1px;
 }
 
 /* LINKS */
 a {
+  color: #b76e79;
+  text-decoration: none;
+  transition: 0.3s;
+}a:hover {
+  text-decoration: underline;
+}
+
+/* HOVER DOS LINKS */
+a:hover {
+  color: #6e2c3a;
+}
+
+/* BOTÕES */
+button {
+  background: #b76e79;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* HOVER BOTÕES */
+button:hover {
+  background: #6e2c3a;
+  box-shadow: 0 0 10px #c6a96b;
+}
+
+/* CARDS (posts) */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* DETALHES DOURADOS (linhas, divisores) */
+hr {
+  border: none;
+  height: 1px;
+  background: #c6a96b;
+  margin: 20px 0;
+}/* MENU CENTRAL */
+.menu-center {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* LINKS */
+.menu-center a {
+  color: #b76e79;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* EFEITO LINHA DOURADA */
+.menu-center a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background: #c6a96b;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.menu-center a:hover {
+  color: #6e2c3a;
+}
+
+.menu-center a:hover::after {
+  width: 100%;
+}/* LINK DO CARD */
+.card-link {
   text-decoration: none;
   color: inherit;
 }
 
-.grid a {
-  display: contents;
-}
-
-.card a {
-  display: block;
-.main {
-  background: linear-gradient(135deg, #f8cdda, #f0c4ab);
-  height: 250px;
-  border-radius: 20px;
-  margin-bottom: 30px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  color: #691d32; /* 👈 COR MAIS ESCURA */
-}
-}.card.main {
-  background-color: #f6d6dc;
-}.main h1, .main p {
-  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}.card.main {
-  color: #8b3a50;
-}.main p {
-  font-size: 20px;
-  margin-top: 10px;
-  font-weight: 500;
-}.link-feelings {
-  display: block;
-  background-color: white;
-  padding: 15px;
-  margin: 20px auto;
-  width: 200px;
-
-  text-decoration: none;
-  color: #8b3a50;
-  font-size: 18px;
-
-  border-radius: 10px;
-  text-align: center;
-}.link-feelings:hover {
-  background-color: #f6d6dc;
-}.feelings-page .card {
+/* IMAGEM DO POST */
+.post-img {
   width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-}.feelings-page {
-  background-color: white;
-  max-width: 900px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  transition: 0.3s;
+
+}.post-page {
+  max-width: 700px;
   margin: 40px auto;
-  padding: 30px;
-  border-radius: 20px;
-}.feelings-page h1 {
+}
+
+.post-page h1 {
   margin-bottom: 10px;
 }
 
-.feelings-page h2 {
-  margin-top: 25px;
-  color: #c97a8a;
-}.diary {
-  background-color: #ffffff;
-  max-width: 700px;
-  margin: 60px auto;
-  padding: 40px;
-  border-radius: 20px;
-
-  line-height: 1.8;
-}.diary h1 {
-  font-size: 32px;
-  margin-bottom: 15px;
+.post-page .date {
+  font-size: 12px;
+  opacity: 0.6;
+  display: block;
+  margin-bottom: 20px;
 }
 
-.diary h2 {
-  margin-top: 30px;
-  color: #c97a8a;
-  font-size: 20px;
-}.diary p {
-  font-size: 16px;
-  color: #444;
+.post-img-full {
+  width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
 }
 
-.intro {
-  font-style: italic;
-  opacity: 0.8;
-}.diary h2::before {
-  content: "— ";
-}.blog {
-  max-width: 700px;
-  margin: 60px auto;
-  padding: 20px;
-}.post {
-  background-color: white;
-  padding: 25px;
-  margin-bottom: 25px;
-  border-radius: 15px;
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}.date {
-  font-size: 13px;
-  color: #999;
-}.post h2 {
-  margin: 10px 0;
-  color: #c97a8a;
+/* IMAGENS DOS CARDS */
+.post-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  transition: 0.3s;
 }
 
-.post p {
-  color: #444;
-  line-height: 1.6;
+/* EFEITO HOVER */
+.card:hover .post-img {
+  transform: scale(1.05);
+}
+
+/* AJUSTES INDIVIDUAIS */
+img[src*="img1"] {
+  object-position: center;
+}
+
+img[src*="img2"] {
+  object-position: 50% 35%;
+}
+
+img[src*="img3"] {
+  object-position: 50% 30%;
+}
+
+img[src*="img4"] {
+  object-position: 50% 40%;
 }

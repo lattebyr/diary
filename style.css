@@ -464,9 +464,3 @@ img[src*="img4"] {
     font-size: 12px;
     padding: 8px 12px;
   }
-
-}@media (max-width: 600px) {
-  h1 {
-    color: red !important;
-  }
-}

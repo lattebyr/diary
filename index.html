@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
-  <title>Raquel's Diary</title>
+  <meta charset="UTF-8">
+  <title>lattebyr</title>
+
   <link rel="stylesheet" href="./style.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -10,49 +12,94 @@
 
 <body>
 
-  <div class="container">
+<header class="header">
+  <img src="logo.png" class="logo">
+</header>
 
-    <div class="card main">
-      <h1>Raquel's Diary ✨</h1>
-<p>Um cantinho pra minha rotina, pensamentos e tudo que eu amo 💖</p>
+<div class="container">
+
+  <div class="card main">
+    <h1>lattebyr</h1>
+    <p class="slogan">like a latte, but in words</p>
+  </div>
+
+  <nav class="menu-center">
+  <a href="#">início</a>
+  <a href="blog.html">diário</a>
+  <a href="feelings.html">pensamentos</a>
+  <a href="#">curiosidades</a>
+  <a href="#">sobre</a>
+</nav>
+  <div class="grid">
+
+    <a href="post1.html" class="card-link">
+  <div class="card">
+    <img src="Bash/img1.jpg" class="post-img">
+    <h2>hi there</h2>
+    <p>meu nome é raquel...</p>
+  </div>
+</a>
+      
+
+    <a href="post2.html" class="card-link">
+  <div class="card">
+    <img src="Bash/img2.jpg" class="post-img">
+    <h2>fun facts</h2>
+    <p>amo coisas aesthetic, café e estudar ouvindo música</p>
+  </div>
+</a>
+
+    <a href="post3.html" class="card-link">
+  <div class="card">
+    <img src="Bash/img3.jpg" class="post-img">
+    <h2>my hobbies</h2>
+    <p>leitura, skincare, organização e pinterest</p>
+  </div>
+</a>
+
+    <a href="post4.html" class="card-link">
+  <div class="card">
+    <img src="Bash/img4.jpg" class="post-img">
+    <h2>my goals</h2>
+    <p>ser independente, crescer na carreira e ter minha rotina dos sonhos</p>
+  </div>
+</a>
+
+    <div class="card" onclick="window.location.href='blog.html'">
+      <h2>Blog objective</h2>
+      <p>Um pouco de tudo, livros, séries, receitas e muito mais.</p>
     </div>
 
-    <div class="grid">
-
-      <div class="card">
-        <h2>Hi there</h2>
-        <p>Meu nome é Raquel, gosto de moda, estética e organização ✨</p>
-      </div>
-
-      <div class="card">
-        <h2>Fun facts</h2>
-        <p>Amo coisas aesthetic, café e estudar ouvindo música</p>
-      </div>
-
-      <div class="card">
-        <h2>My hobbies</h2>
-        <p>Leitura, skincare, organização e Pinterest</p>
-      </div>
-
-      <div class="card">
-        <h2>My goals</h2>
-        <p>Ser independente, crescer na carreira e ter minha rotina dos sonhos</p>
-      </div>
-
-      <div class="card" onclick="window.location.href='blog.html'">
-  <h2>Blog objective</h2>
-  <p>Um pouco de tudo, livros, séries, receitas e muito mais.</p>
-</div>
-
-<div class="card" onclick="window.location.href='feelings.html'">
-  <h2>Feelings you will feel</h2>
-  <p>Dor na barriga de tanto rir, nostalgia e diversão.</p>
-</div>
-
- 
+    <div class="card" onclick="window.location.href='feelings.html'">
+      <h2>My Feelings</h2>
+      <p>Dor na barriga de tanto rir, nostalgia e diversão.</p>
     </div>
 
   </div>
 
-</body>
-</html>
+</div>
+
+<!-- MÚSICA -->
+<audio id="bg-music" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">
+  🎧 música
+</button>
+
+<!-- JAVASCRIPT -->
+<script>
+let musicPlaying = false;
+const music = document.getElementById("bg-music");
+
+/* MÚSICA */
+function toggleMusic() {
+  if (musicPlaying) {
+    music.pause();
+    musicPlaying = false;
+  } else {
+    music.play();
+    musicPlaying = true;
+  }
+}

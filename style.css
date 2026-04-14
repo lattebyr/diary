@@ -22,8 +22,9 @@ body {
 
 /* LOGO */
 .logo {
-  width: 120px;
-  margin-bottom: 10px;
+  width: 12vw;
+  max-width: 160px;
+  min-width: 100px;
 }
 
 /* MENU */
@@ -85,37 +86,28 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* BOTÃO LIKE */
-.like-btn {
-  margin-top: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #b76e79;
-  font-size: 16px;
-}
 
-.like-btn.liked {
-  color: #6e2c3a;
-}
 
-/* BOTÃO MÚSICA */
-.music-btn {
+#btnMusica {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #b76e79;
+
+  background: rgba(107, 79, 79, 0.8);
+  backdrop-filter: blur(10px);
+
   color: white;
   border: none;
-  padding: 10px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: 0.3s;
+
+  padding: 10px 15px;
+  border-radius: 30px;
+
+  font-size: 14px;
 }
 
-.music-btn:hover {
-  background: #6e2c3a;
-  box-shadow: 0 0 10px #c6a96b;
+#btnMusica:hover {
+  transform: scale(1.1);
+  background: #8b6b6b;
 }
 /* ===== DIÁRIO (ESTILO COM PERSONALIDADE) ===== */
 
